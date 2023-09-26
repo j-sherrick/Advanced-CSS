@@ -3,12 +3,20 @@
 *::before {
     margin: 0;
     padding: 0;
+    box-sizing: inherit;
+}
+
+:root {
+    --light-aqua: 154, 234, 240;
+    --medium-aqua: 52, 213, 224;
+    --dark-aqua: 26, 107, 112;
 }
 
 html {
-
+    font-size: 10px;
 }
 
 body {
-    
+    font: 400 1rem/1.7 Inter, Verdana, system-ui, sans-serif;
+    box-sizing: border-box;
 }
