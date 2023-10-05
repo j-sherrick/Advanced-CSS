@@ -1,15 +1,17 @@
+:root {
+    --primary-light-rgb: 126, 213, 111;
+    --primary-medium-rgb: 40, 180, 131;
+    --primary-dark-rgb: 29, 129, 82;
+
+    --primary-neutral-hex: #777;
+}
+
 *,
 *::after,
 *::before {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
-}
-
-:root {
-    --light-aqua: 154, 234, 240;
-    --medium-aqua: 52, 213, 224;
-    --dark-aqua: 26, 107, 112;
+    box-sizing: border-box;
 }
 
 html {
@@ -17,6 +19,195 @@ html {
 }
 
 body {
-    font: 400 1rem/1.7 Inter, Verdana, system-ui, sans-serif;
+    font: 400 1.6rem/1.7 Inter, Verdana, system-ui, sans-serif;
     box-sizing: border-box;
+    color: #999;
+    padding: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    font-weight: 500;
+}
+
+/* linear-gradient(rgb(var(--light-aqua)), rgb(var(--medium-aqua))), */
+.header {
+    height: 95vh;
+    background:
+        linear-gradient(
+            to right bottom,
+            rgba(var(--primary-light-rgb), 0.6),
+            rgba(var(--primary-medium-rgb), 0.6)
+        ),
+        url('../images/snow-mountainbike-slava-auchynnikau-s41Qwb_i5X8-unsplash.jpg')
+        bottom/cover;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    animation: 1.5s ease-in-out expandingClipPath;
+}
+
+.logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+}
+
+.logo {
+    height: 10rem;
+}
+
+.heading-primary {
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+}
+
+.heading-primary span {
+    display: block;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+}
+
+.heading-primary-main {
+    font-size: 6rem;
+    letter-spacing: 3rem;
+    font-weight: 700;
+}
+
+.heading-primary-sub {
+    font-size: 2rem;
+    letter-spacing: 1.5rem;
+    font-weight: 500;
+}
+
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+    color: white;
+}
+
+.btn:link,
+.btn:visited {
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    transition: all 0.1s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0.5rem 0.8rem 1.4rem rgba(100, 100, 100, 0.4);
+}
+
+.btn:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0.5rem 0.8rem 0.7rem rgba(100, 100, 100, 0.4);
+}
+
+.btn-white {
+    background-color: white;
+    color: var(--primary-neutral-hex);
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-white::after {
+    background-color: white;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+@keyframes expandingClipPath {
+    0% {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    50% {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+    }
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+    
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+
+    80% {
+        transform: translateY(-1rem);
+    }
+
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+.fade-bottom {
+    animation: 1s 1s ease-in-out fadeInBottom;
+    animation-fill-mode: backwards;
+}
+
+.fade-right {
+    animation: 1s 1s ease-in-out fadeInRight;
+    animation-fill-mode: backwards;
+}
+
+.fade-left {
+    animation: 1s 1s ease-in-out fadeInLeft;
+    animation-fill-mode: backwards;
 }
