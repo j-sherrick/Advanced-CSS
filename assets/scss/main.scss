@@ -6,6 +6,14 @@
     --primary-neutral-hex: #777;
 }
 
+$color-primary: #28b483;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #1d8152;
+
+$color-mono: #777;
+$color-mono-light: #bbb;
+$color-mono-dark: #555;
+
 *,
 *::after,
 *::before {
@@ -33,62 +41,63 @@ a {
     font-weight: 500;
 }
 
-/* linear-gradient(rgb(var(--light-aqua)), rgb(var(--medium-aqua))), */
 .header {
     height: 95vh;
     background:
         linear-gradient(
             to right bottom,
-            rgba(var(--primary-light-rgb), 0.6),
-            rgba(var(--primary-medium-rgb), 0.6)),
+            rgba($color-primary, 0.6),
+            rgba($color-primary-light, 0.6)),
         url('../images/snow-mountainbike-slava-auchynnikau-s41Qwb_i5X8-unsplash.jpg')
         bottom/cover;
     clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
     animation: 1.5s ease-in-out expandingClipPath;
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        text-align: center;
+        color: white;
+    }
+    
+    &__logo {
+        height: 10rem;
+    }
 }
     
-.header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-}
-
-.header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    text-align: center;
-    color: white;
-}
-
-.header__logo {
-    height: 10rem;
-}
     
 .heading-primary {
     text-transform: uppercase;
     margin-bottom: 6rem;
+
+    &--main,
+    &--sub {
+        display: block;
+        backface-visibility: hidden;
+        margin-bottom: 6rem;
+    }
+    
+    &--main {
+        font-size: 6rem;
+        letter-spacing: 3rem;
+        font-weight: 700;
+    }
+    
+    &--sub {
+        font-size: 2rem;
+        letter-spacing: 1.5rem;
+        font-weight: 500;
+    }
 }
 
-.heading-primary--main,
-.heading-primary--sub {
-    display: block;
-    backface-visibility: hidden;
-    margin-bottom: 6rem;
-}
-
-.heading-primary--main {
-    font-size: 6rem;
-    letter-spacing: 3rem;
-    font-weight: 700;
-}
-
-.heading-primary--sub {
-    font-size: 2rem;
-    letter-spacing: 1.5rem;
-    font-weight: 500;
-}
 
 
 .btn:link,
@@ -103,17 +112,17 @@ a {
 
 .btn:hover {
     transform: translateY(-0.25rem);
-    box-shadow: 0.5rem 0.8rem 1.4rem rgba(100, 100, 100, 0.4);
+    box-shadow: 0.5rem 0.8rem 1.4rem rgba($color-mono-dark, 0.4);
 }
 
 .btn:active {
     transform: translateY(-0.1rem);
-    box-shadow: 0.5rem 0.8rem 0.7rem rgba(100, 100, 100, 0.4);
+    box-shadow: 0.5rem 0.8rem 0.7rem rgba($color-mono-dark, 0.4);
 }
 
 .btn-white {
     background-color: white;
-    color: var(--primary-neutral-hex);
+    color: $color-mono;
 }
 
 .btn::after {
