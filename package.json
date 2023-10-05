@@ -1,0 +1,31 @@
+{
+  "name": "advanced-css",
+  "version": "1.0.0",
+  "description": "Advanced CSS and Sass Tutorial Website",
+  "main": "index.html",
+  "scripts": {
+    "compile:sass": "sass assets/sass/main.scss assets/css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j-sherrick/Advanced-CSS.git"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "stylesheets",
+    "tutorial",
+    "websites",
+    "html"
+  ],
+  "author": "Jason Sherrick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/j-sherrick/Advanced-CSS/issues"
+  },
+  "homepage": "https://github.com/j-sherrick/Advanced-CSS#readme",
+  "dependencies": {
+    "sass": "^1.68.0",
+    "save-dev": "^0.0.1-security"
+  }
+}

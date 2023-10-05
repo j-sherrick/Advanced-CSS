@@ -40,48 +40,20 @@ a {
         linear-gradient(
             to right bottom,
             rgba(var(--primary-light-rgb), 0.6),
-            rgba(var(--primary-medium-rgb), 0.6)
-        ),
+            rgba(var(--primary-medium-rgb), 0.6)),
         url('../images/snow-mountainbike-slava-auchynnikau-s41Qwb_i5X8-unsplash.jpg')
         bottom/cover;
     clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
     animation: 1.5s ease-in-out expandingClipPath;
 }
-
-.logo-box {
+    
+.header__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem;
 }
 
-.logo {
-    height: 10rem;
-}
-
-.heading-primary {
-    text-transform: uppercase;
-    margin-bottom: 6rem;
-}
-
-.heading-primary span {
-    display: block;
-    backface-visibility: hidden;
-    margin-bottom: 6rem;
-}
-
-.heading-primary-main {
-    font-size: 6rem;
-    letter-spacing: 3rem;
-    font-weight: 700;
-}
-
-.heading-primary-sub {
-    font-size: 2rem;
-    letter-spacing: 1.5rem;
-    font-weight: 500;
-}
-
-.text-box {
+.header__text-box {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -89,6 +61,35 @@ a {
     text-align: center;
     color: white;
 }
+
+.header__logo {
+    height: 10rem;
+}
+    
+.heading-primary {
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+}
+
+.heading-primary--main,
+.heading-primary--sub {
+    display: block;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+}
+
+.heading-primary--main {
+    font-size: 6rem;
+    letter-spacing: 3rem;
+    font-weight: 700;
+}
+
+.heading-primary--sub {
+    font-size: 2rem;
+    letter-spacing: 1.5rem;
+    font-weight: 500;
+}
+
 
 .btn:link,
 .btn:visited {
@@ -197,17 +198,17 @@ a {
     }
 }
 
-.fade-bottom {
+._fade-bottom {
     animation: 1s 1s ease-in-out fadeInBottom;
     animation-fill-mode: backwards;
 }
 
-.fade-right {
+._fade-right {
     animation: 1s 1s ease-in-out fadeInRight;
     animation-fill-mode: backwards;
 }
 
-.fade-left {
+._fade-left {
     animation: 1s 1s ease-in-out fadeInLeft;
     animation-fill-mode: backwards;
 }
