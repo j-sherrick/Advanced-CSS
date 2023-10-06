@@ -1,3 +1,4 @@
+/*----- SASSY VARIABLES -----*/
 /*----- SASSY BASE STYLES -----*/
 *,
 *::after,
@@ -95,7 +96,6 @@ a {
   animation-fill-mode: backwards;
 }
 
-/*----- SASSY VARIABLES -----*/
 .btn:link, .btn:visited {
   padding: 1.5rem 4rem;
   border-radius: 10rem;
@@ -136,6 +136,7 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
+/*----- SASSY HEADER -----*/
 .header {
   height: 95vh;
   background: linear-gradient(to right bottom, rgba(40, 180, 131, 0.6), rgba(126, 213, 111, 0.6)), url("../images/snow-mountainbike-slava-auchynnikau-s41Qwb_i5X8-unsplash.jpg") bottom/cover;
@@ -159,6 +160,7 @@ a {
   height: 10rem;
 }
 
+/*----- SASSY FONT -----*/
 .heading-primary {
   text-transform: uppercase;
   margin-bottom: 6rem;

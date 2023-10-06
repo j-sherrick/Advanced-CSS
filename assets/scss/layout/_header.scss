@@ -1,0 +1,33 @@
+/*----- SASSY HEADER -----*/
+
+.header {
+    height: 95vh;
+    background:
+        linear-gradient(
+            to right bottom,
+            rgba($color-primary, 0.6),
+            rgba($color-primary-light, 0.6)),
+        url('../images/snow-mountainbike-slava-auchynnikau-s41Qwb_i5X8-unsplash.jpg')
+        bottom/cover;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    animation: 1.5s ease-in-out expandingClipPath;
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        text-align: center;
+        color: white;
+    }
+    
+    &__logo {
+        height: 10rem;
+    }
+}
