@@ -1,0 +1,79 @@
+/*----- SASSY ANIMATIONS -----*/
+
+@keyframes expandingClipPath {
+    0% {
+        clip-path: polygon(0 0, 0 0, 0 1%, 0 1%);
+    }
+    33% {
+        clip-path: polygon(0 0, 100% 0, 100% 1%, 0 1%);
+    }
+    66% {
+        clip-path: polygon(0 0, 100% 0, 100% 1%, 0 100%);
+    }
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+    
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+
+    80% {
+        transform: translateY(-1rem);
+    }
+
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+._fade-bottom {
+    animation: 1s 1s ease-in-out fadeInBottom;
+    animation-fill-mode: backwards;
+}
+
+._fade-right {
+    animation: 1s 1s ease-in-out fadeInRight;
+    animation-fill-mode: backwards;
+}
+
+._fade-left {
+    animation: 1s 1s ease-in-out fadeInLeft;
+    animation-fill-mode: backwards;
+}

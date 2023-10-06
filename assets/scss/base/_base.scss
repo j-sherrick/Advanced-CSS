@@ -1,0 +1,28 @@
+/*----- SASSY BASE STYLES -----*/
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font: 400 1.6rem/1.7 Inter, Verdana, system-ui, sans-serif;
+    box-sizing: border-box;
+    color: #999;
+    padding: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    font-weight: 500;
+}
