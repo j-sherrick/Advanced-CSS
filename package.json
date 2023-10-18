@@ -25,7 +25,9 @@
   },
   "homepage": "https://github.com/j-sherrick/Advanced-CSS#readme",
   "dependencies": {
-    "sass": "^1.68.0",
-    "save-dev": "^0.0.1-security"
+    "sass": "^1.68.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
   }
 }
